@@ -1,9 +1,6 @@
 ﻿using System;
 
 
-
-
-
 public class HaloGeneric
 {
     public static void sapaUser<T>(T param)
@@ -13,12 +10,29 @@ public class HaloGeneric
 }
 
 
+public class DataGeneric<T>
+{
+    private T data;
+
+    public DataGeneric(T data)
+    {
+        this.data = data;
+    }
+
+    public void PrintData()
+    {
+        Console.WriteLine($"Data yang tersimpan adalah {data}");
+    }
+}
+
+
 class MainClass
 {
     public static void Main(string[] args)
     {
-        string input = Console.ReadLine();
-        HaloGeneric.sapaUser(input);
+        string NIM = Console.ReadLine();
+        DataGeneric<string> obj = new DataGeneric<string>(NIM);
+        obj.PrintData();
     }
 }
 
