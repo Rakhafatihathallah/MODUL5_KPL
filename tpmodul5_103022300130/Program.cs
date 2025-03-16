@@ -1,12 +1,24 @@
 ﻿using System;
 
-namespace tpmodul5_103022300130
+
+
+
+
+public class HaloGeneric
 {
-    class MainClass
+    public static void sapaUser<T>(T param)
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        Console.WriteLine($"\nHalo user {param}");
     }
 }
+
+
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        string input = Console.ReadLine();
+        HaloGeneric.sapaUser(input);
+    }
+}
+
